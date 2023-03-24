@@ -1,0 +1,48 @@
+{
+    "color": {
+        "colorIconsAttributeEdit": {
+            "border_color": "none",
+            "border_size": 0,
+            "color": "white"
+        },
+        "colorIconsButton": {
+            "border_color": "black",
+            "border_size": 60,
+            "color": "#CD4B00"
+        },
+        "colorIconsContextMenu": {
+            "border_color": "none",
+            "border_size": 0,
+            "color": "white"
+        },
+        "colorIconsToolBar": {
+            "border_color": "none",
+            "border_size": 0,
+            "color": "#CD4B00"
+        },
+        "polyline": {
+            "colorIconsPolyline": {
+                "border_color": "black",
+                "border_size": 30,
+                "color": "none"
+            },
+            "colorIconsPolylineWithStyleSheets": {
+                "border_color": "black",
+                "border_size": 30,
+                "color": "none"
+            }
+        }
+    },
+    "compareRmNumber": false,
+    "compareStartDate": false,
+    "embeded": false,
+    "fileFilter": "Файлы данных (*.txt *.csv)",
+    "pathToAssociateFile": "./../grapher/associateFile.json",
+    "pathToDefaultJsonFile": "./../grapher/defaultJsonFolder",
+    "pathToTargetFile": "/home/lebedenko/Desktops/Desktop1/test/reports/мое",
+    "pathToUserJsonFile": "./../grapher/usersJsonFolder",
+    "startPathFindFile": "/home/lebedenko/Desktops/Desktop1/test/reports/мое",
+    "styleSheet": false,
+    "useRusTitle": false,
+    "userIsEnable": true
+}

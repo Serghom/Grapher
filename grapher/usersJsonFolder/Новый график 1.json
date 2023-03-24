@@ -1,0 +1,71 @@
+[
+    {
+        "graph": [
+            {
+                "key": {
+                    "color": "blue",
+                    "dash": "SolidLine",
+                    "dots": true,
+                    "dots_size": 3,
+                    "dots_style": "Ellipse",
+                    "is_Border": true,
+                    "name": "name",
+                    "param": "param",
+                    "param_x": "",
+                    "param_y": "",
+                    "second_y": false,
+                    "width": 2
+                }
+            },
+            {
+                "key": {
+                    "color": "red",
+                    "dash": "SolidLine",
+                    "dots": true,
+                    "dots_size": 3,
+                    "dots_style": "Ellipse",
+                    "is_Border": true,
+                    "name": "name2",
+                    "param": "param2",
+                    "param_x": "",
+                    "param_y": "",
+                    "second_y": false,
+                    "width": 2
+                }
+            },
+            {
+                "key2": {
+                    "color": "yellow",
+                    "dash": "SolidLine",
+                    "dots": true,
+                    "dots_size": 3,
+                    "dots_style": "Ellipse",
+                    "is_Border": true,
+                    "name": "name3",
+                    "param": "param3",
+                    "param_x": "",
+                    "param_y": "",
+                    "second_y": false,
+                    "width": 2
+                }
+            }
+        ],
+        "legend_pos": "top_right",
+        "move_second_y": 0,
+        "move_x": 0,
+        "move_y": 0,
+        "namefile": "Новый график 1",
+        "second_title_y": "",
+        "second_y_max_scale": 0,
+        "second_y_min_scale": 0,
+        "title_main": "Новый график 1",
+        "title_x": "Время, с",
+        "title_y": "",
+        "vlines": [
+        ],
+        "x_max_scale": 0,
+        "x_min_scale": 0,
+        "y_max_scale": 0,
+        "y_min_scale": 0
+    }
+]

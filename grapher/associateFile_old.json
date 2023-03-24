@@ -1,0 +1,30 @@
+{
+    "bez": {
+        "name": "BEZ",
+        "reg": "bez*"
+    },
+    "binus": {
+        "name": "kek",
+        "reg": "bin*"
+    },
+    "flight": {
+        "name": "FLIGHT",
+        "reg": "flight*"
+    },
+    "gnss": {
+        "name": "Бортовая СНС",
+        "reg": "gnss*"
+    },
+    "nk": {
+        "name": "НК КИТТП",
+        "reg": "nk-kittp*"
+    },
+    "out": {
+        "name": "OUT",
+        "reg": "out*"
+    },
+    "sau": {
+        "name": "САУ и БК КИТТП",
+        "reg": "sau-bk_kittp*"
+    }
+}

@@ -1,0 +1,11 @@
+﻿QDialog QLabel
+{
+    border: none;
+    color: black;
+    background-color: white;
+}
+
+QDialog QToolButton
+{
+    color: black;
+}

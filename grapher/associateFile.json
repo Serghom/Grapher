@@ -1,0 +1,10 @@
+{
+    "Key": {
+        "name": "name",
+        "reg": "*name*"
+    },
+    "key2": {
+        "name": "name2",
+        "reg": "*name2*"
+    }
+}

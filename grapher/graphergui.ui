@@ -1,0 +1,1479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GrapherGui</class>
+ <widget class="QMainWindow" name="GrapherGui">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>983</width>
+    <height>701</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>595</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Графический редактор</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/image/icons/okb_mei.png</normaloff>:/image/icons/okb_mei.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_14">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>3</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>3</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_9">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_key">
+          <property name="font">
+           <font>
+            <family>Sans Serif</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Набор данных</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listKey">
+          <property name="font">
+           <font>
+            <family>Liberation Mono</family>
+            <pointsize>12</pointsize>
+            <kerning>false</kerning>
+           </font>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>25</width>
+            <height>25</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <property name="spacing">
+           <number>3</number>
+          </property>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_key">
+            <property name="inputMask">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>Ключ</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_keyName">
+            <property name="placeholderText">
+             <string>Имя</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_keyReg">
+            <property name="placeholderText">
+             <string>Выражение для поиска файла</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_key">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_title_params">
+            <property name="placeholderText">
+             <string>Через &quot;|&quot; описать параметры, по которым можно найти шапку</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButton_key_add">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string> Добавить</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/image/icons/key.png</normaloff>:/image/icons/key.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_key_delete">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string> Удалить</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/image/icons/trash.png</normaloff>:/image/icons/trash.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_file">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Список файлов</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="margin">
+           <number>-2</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButton_addFile">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string> Добавить</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/image/icons/add-file.png</normaloff>:/image/icons/add-file.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_deleteFile">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Удалить</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/image/icons/trash.png</normaloff>:/image/icons/trash.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listFile">
+          <property name="font">
+           <font>
+            <family>Liberation Mono</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>25</width>
+            <height>25</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QWidget" name="grapherWidget" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line_scale_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_Xmin">
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_Xmin">
+              <property name="minimumSize">
+               <size>
+                <width>70</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>X min</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_Xmax">
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_Xmax">
+              <property name="minimumSize">
+               <size>
+                <width>70</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>X max</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_scale">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_Ymin">
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_Ymin">
+              <property name="minimumSize">
+               <size>
+                <width>70</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Y min</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_Ymax">
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_Ymax">
+              <property name="minimumSize">
+               <size>
+                <width>70</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Y max</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_scale_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_SecondYmin">
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_SecondYmin">
+              <property name="minimumSize">
+               <size>
+                <width>70</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Y2 min</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_SecondYmax">
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>16777215</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_SecondYmax">
+              <property name="minimumSize">
+               <size>
+                <width>70</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Y2 max</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_defaultScale">
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/image/icons/restart.png</normaloff>:/image/icons/restart.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>25</width>
+            <height>25</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_11">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_graph">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <italic>false</italic>
+            <bold>true</bold>
+            <underline>false</underline>
+            <strikeout>false</strikeout>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="text">
+           <string>Список графиков</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::AutoText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="margin">
+           <number>-2</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item>
+           <widget class="QRadioButton" name="radioButton_default">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Стандартные</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_users">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Пользовательские</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listGraph">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>300</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::DoubleClicked</set>
+          </property>
+          <property name="tabKeyNavigation">
+           <bool>true</bool>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>25</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="textElideMode">
+           <enum>Qt::ElideNone</enum>
+          </property>
+          <property name="verticalScrollMode">
+           <enum>QAbstractItemView::ScrollPerItem</enum>
+          </property>
+          <property name="isWrapping" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="resizeMode">
+           <enum>QListView::Fixed</enum>
+          </property>
+          <property name="layoutMode">
+           <enum>QListView::SinglePass</enum>
+          </property>
+          <property name="uniformItemSizes">
+           <bool>false</bool>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="selectionRectVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_16">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="pushButton_editGraph">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string> Редактировать</string>
+              </property>
+              <property name="icon">
+               <iconset resource="resource.qrc">
+                <normaloff>:/image/icons/edit.png</normaloff>:/image/icons/edit.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_createGraph">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string> Сохранить</string>
+              </property>
+              <property name="icon">
+               <iconset resource="resource.qrc">
+                <normaloff>:/image/icons/png-file.png</normaloff>:/image/icons/png-file.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_deleteMode">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/image/icons/trash.png</normaloff>:/image/icons/trash.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_17">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="pushButton_back_to_view">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/image/icons/arrow_back.png</normaloff>:/image/icons/arrow_back.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>25</width>
+            <height>25</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_delete_selected_graph">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Удалить</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/image/icons/trash.png</normaloff>:/image/icons/trash.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>25</width>
+            <height>25</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_attribute">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Список атрибутов</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="margin">
+           <number>-2</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_12">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QListWidget" name="listAttribute">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::CustomContextMenu</enum>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAsNeeded</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::DoubleClicked</set>
+            </property>
+            <property name="tabKeyNavigation">
+             <bool>true</bool>
+            </property>
+            <property name="dragDropMode">
+             <enum>QAbstractItemView::NoDragDrop</enum>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="textElideMode">
+             <enum>Qt::ElideNone</enum>
+            </property>
+            <property name="spacing">
+             <number>3</number>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+            <property name="selectionRectVisible">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="listLines">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::CustomContextMenu</enum>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAsNeeded</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="dragDropMode">
+             <enum>QAbstractItemView::InternalMove</enum>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_15"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButton_view">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string> Просмотр</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/image/icons/visible.png</normaloff>:/image/icons/visible.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_edit_save">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string> Сохр. Шаблон</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/image/icons/save.png</normaloff>:/image/icons/save.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButton_addAttr">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string> Добавить</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/image/icons/create.png</normaloff>:/image/icons/create.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_delete">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string> Удалить</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/image/icons/trash.png</normaloff>:/image/icons/trash.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+   <zorder>line</zorder>
+   <zorder></zorder>
+   <zorder></zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="sizeGripEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::PreventContextMenu</enum>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::BottomToolBarArea|Qt::TopToolBarArea</set>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_newGraph"/>
+   <addaction name="separator"/>
+   <addaction name="action_addKey"/>
+   <addaction name="action_files"/>
+   <addaction name="action_graph"/>
+   <addaction name="separator"/>
+   <addaction name="action_scale"/>
+   <addaction name="separator"/>
+   <addaction name="action_view"/>
+   <addaction name="action_editing"/>
+  </widget>
+  <action name="action_files">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/file.png</normaloff>:/image/icons/file.png</iconset>
+   </property>
+   <property name="text">
+    <string>Файлы</string>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/image/icons/Paomedia-Small-N-Flat-Floppy.ico</normaloff>:/image/icons/Paomedia-Small-N-Flat-Floppy.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="action_newGraph">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/new_file.png</normaloff>:/image/icons/new_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>Новый</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::ApplicationSpecificRole</enum>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+   <property name="priority">
+    <enum>QAction::HighPriority</enum>
+   </property>
+  </action>
+  <action name="action_graph">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/graphs.png</normaloff>:/image/icons/graphs.png</iconset>
+   </property>
+   <property name="text">
+    <string>График</string>
+   </property>
+   <property name="toolTip">
+    <string>График</string>
+   </property>
+  </action>
+  <action name="action_scale">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/ruler.png</normaloff>:/image/icons/ruler.png</iconset>
+   </property>
+   <property name="text">
+    <string>Масштаб</string>
+   </property>
+  </action>
+  <action name="action_addKey">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/key.png</normaloff>:/image/icons/key.png</iconset>
+   </property>
+   <property name="text">
+    <string>Набор данных</string>
+   </property>
+   <property name="toolTip">
+    <string>Набор данных</string>
+   </property>
+  </action>
+  <action name="action_view">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/visible.png</normaloff>:/image/icons/visible.png</iconset>
+   </property>
+   <property name="text">
+    <string>Просмотр</string>
+   </property>
+   <property name="toolTip">
+    <string>Режим просмотра</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_editing">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/edit-image.png</normaloff>:/image/icons/edit-image.png</iconset>
+   </property>
+   <property name="text">
+    <string>Редактирование</string>
+   </property>
+   <property name="toolTip">
+    <string>Режим редактирования</string>
+   </property>
+  </action>
+  <action name="action_new_vertical_line">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/vertical_line.png</normaloff>:/image/icons/vertical_line.png</iconset>
+   </property>
+   <property name="text">
+    <string>Вертикальная линия</string>
+   </property>
+   <property name="toolTip">
+    <string>Добавить вертикальную линию</string>
+   </property>
+  </action>
+  <action name="action_new_param_line">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/polyline.png</normaloff>:/image/icons/polyline.png</iconset>
+   </property>
+   <property name="text">
+    <string>Параметр</string>
+   </property>
+   <property name="toolTip">
+    <string>Добавить параметр</string>
+   </property>
+  </action>
+  <action name="action_newGraph_atTime">
+   <property name="text">
+    <string>Новый график от времени</string>
+   </property>
+  </action>
+  <action name="action_newGraph_atParam">
+   <property name="text">
+    <string>Новый график от параметра</string>
+   </property>
+  </action>
+  <action name="action_is_markers">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Маркеры</string>
+   </property>
+   <property name="toolTip">
+    <string>Вкл/Выкл маркеры на графике</string>
+   </property>
+  </action>
+  <action name="action_save_this_graph">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/png-file.png</normaloff>:/image/icons/png-file.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+   <property name="toolTip">
+    <string>Сохранить этот график</string>
+   </property>
+  </action>
+  <action name="action_delete_lines">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/trash.png</normaloff>:/image/icons/trash.png</iconset>
+   </property>
+   <property name="text">
+    <string>Удалить</string>
+   </property>
+   <property name="toolTip">
+    <string>Удалить выбраный атрибут</string>
+   </property>
+  </action>
+  <action name="action_add_line_graph_lines">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/create.png</normaloff>:/image/icons/create.png</iconset>
+   </property>
+   <property name="text">
+    <string>Добавить</string>
+   </property>
+   <property name="toolTip">
+    <string>Добавить параметр</string>
+   </property>
+  </action>
+  <action name="action_edit_this_graph">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/edit.png</normaloff>:/image/icons/edit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Редактировать</string>
+   </property>
+   <property name="toolTip">
+    <string>Редактировать этот график</string>
+   </property>
+  </action>
+  <action name="action_delete_this_graph">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/trash.png</normaloff>:/image/icons/trash.png</iconset>
+   </property>
+   <property name="text">
+    <string>Удалить</string>
+   </property>
+   <property name="toolTip">
+    <string>Удалить график</string>
+   </property>
+  </action>
+  <action name="action_resert_edited">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/image/icons/restart.png</normaloff>:/image/icons/restart.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сбросить</string>
+   </property>
+   <property name="toolTip">
+    <string>Сбросить изменения</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>radioButton_default</tabstop>
+  <tabstop>radioButton_users</tabstop>
+  <tabstop>listGraph</tabstop>
+  <tabstop>pushButton_editGraph</tabstop>
+  <tabstop>pushButton_createGraph</tabstop>
+  <tabstop>lineEdit_Xmin</tabstop>
+  <tabstop>lineEdit_Xmax</tabstop>
+  <tabstop>lineEdit_Ymin</tabstop>
+  <tabstop>lineEdit_Ymax</tabstop>
+  <tabstop>lineEdit_SecondYmin</tabstop>
+  <tabstop>lineEdit_SecondYmax</tabstop>
+  <tabstop>pushButton_defaultScale</tabstop>
+  <tabstop>pushButton_addAttr</tabstop>
+  <tabstop>pushButton_delete</tabstop>
+  <tabstop>pushButton_addFile</tabstop>
+  <tabstop>listFile</tabstop>
+  <tabstop>pushButton_deleteFile</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
