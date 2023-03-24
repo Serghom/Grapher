@@ -1,5 +1,10 @@
 # grapher
 Program for plotting graphs from files
+create with QT C++ and QWT
+
+![Image alt](https://github.com/Serghom/grapher/blob/main/prew/%D0%A2%D0%B5%D1%81%D1%82%20%D1%82%D0%BE%D1%87%D0%B5%D0%BA.png)
+![Image alt](https://github.com/Serghom/grapher/blob/main/prew/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%B3%D1%80%D0%B0%D1%84.png)
+
 
 --- 
 Программа может работать как и из консоли, так и через GUI
